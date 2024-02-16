@@ -32,8 +32,4 @@ module "ec2_prod" {
   tags          = local.common_tags
   iam_role_name = module.iam.ec2_iam_role_name
   key_pair_name = "nova1-key-pair"
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 05025c9332c33322f47eab4dc96256bd1803f7ac
