@@ -70,7 +70,7 @@ resource "aws_iam_instance_profile" "instance_profile" {
 resource "aws_instance" "web_server" {
   ami                    = "ami-0e731c8a588258d0d"
   instance_type          = "t3.small"
-  key_name               = var.key_pair_name
+  key_name               = cicdproject
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
   user_data              = file("scripts/userdata.sh")
   iam_instance_profile   = aws_iam_instance_profile.instance_profile.name
